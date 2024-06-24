@@ -5,13 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Courses - EDUPLATFORM</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        html, body {
+            height: 100%;
             margin: 0;
             padding: 0;
+            font-family: Arial, sans-serif;
             color: white;
             background-color: #001f3f; /* Dark Blue */
-            transition: background-color 0.3s ease; /* Smooth background color transition */
+        }
+        body {
+            display: flex;
+            flex-direction: column;
         }
         header {
             background-color: #001f3f;
@@ -52,6 +56,7 @@
             padding: 2em;
             background-color: white;
             color: #001f3f;
+            flex: 1 0 auto; /* Allow the content section to grow and take up the remaining space */
         }
         .courses {
             display: flex;
@@ -108,6 +113,7 @@
             color: white;
             text-align: center;
             padding: 1em 0;
+            flex-shrink: 0; /* Ensure footer stays at the bottom */
         }
         @media (max-width: 768px) {
             header {

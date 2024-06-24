@@ -136,10 +136,9 @@
         {!! $lesson->content !!}
         <br>
         @if($lesson->path)
-            <video width="100%" controls>
-                <source src="{{ asset($lesson->path) }}" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+        
+        <iframe width="100%" height="500" src="{{ asset($lesson->path) }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h1>{{ asset($lesson->path) }}</h1>
         @endif
     </div>
 </section>
